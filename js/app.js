@@ -35,7 +35,7 @@ const addNote = (text = "") => {
         "click",
         function() {
             note.remove();
-            saveNotes();
+            saveNotes(); 
         }
     )  // ensures that deleted notes are removed from localStorage
     note.querySelector(".save").addEventListener(
@@ -54,6 +54,8 @@ const addNote = (text = "") => {
     main.appendChild(note);
     saveNotes(); // saves empty notes("") on localStorage
 }
+
+// IIFE(Immediately Invoked Function Expression) this part runs immediately after the script loads
 (
     function() {
         const lsNotes = JSON.parse(localStorage.getItem("notes"));
