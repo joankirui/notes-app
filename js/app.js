@@ -54,6 +54,7 @@ const addNote = (text = "") => {
     main.appendChild(note);
     saveNotes(); // saves empty notes("") on localStorage
 }
+    // IIFE(Immediately Invoked Function Expression) this part runs immediately after the script loads
 (
     function() {
         const lsNotes = JSON.parse(localStorage.getItem("notes"));
